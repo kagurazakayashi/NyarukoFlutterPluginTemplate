@@ -58,6 +58,26 @@ flutter build apk --config-only
 1. 启动 `Android Studio`，在“欢迎使用 Android Studio”对话框中选择“打开现有 Android Studio 项目”，或从菜单中选择“文件 > 打开”，然后选择 `example/android/build.gradle` 文件。
 2. 在 Gradle 同步对话框中，选择确定。在 Android Gradle 插件更新对话框中，选择此项目不再提醒我。
 
-源码文件在: `android/src/main/java/moe/yashi/plugintemplatejo/PlugintemplatejoPlugin.java`
+源码文件在 `Android Studio` 中: [android/src/main/java/moe/yashi/plugintemplatejo/PlugintemplatejoPlugin.java](android/src/main/java/moe/yashi/plugintemplatejo/PlugintemplatejoPlugin.java)
 
-![android/src/main/java/moe/yashi/plugintemplatejo/PlugintemplatejoPlugin.java](readme.img/android_src.png)
+位于项目文件夹: 同上
+
+![Android Studio](readme.img/android_src.png)
+
+## iOS 端代码
+
+在编辑代码之前，先至少构建过一次。
+
+```sh
+cd example
+flutter build ios --no-codesign --config-only
+open example/ios/Runner.xcworkspace # 打开 Xcode
+```
+
+源码文件在 `Xcode` 中: `Pods/Development Pods/plugintemplatejo/../../example/ios/.symlinks/plugins/plugintemplatejo/ios/Classes/PlugintemplatejoPlugin.m`
+
+位于项目文件夹: [ios/Classes/PlugintemplatejoPlugin.m](ios/Classes/PlugintemplatejoPlugin.m)
+
+如果使用的是 `sharedDarwinSource` ，路径将以 `plugintemplatejo/darwin/Classes/PlugintemplatejoPlugin.m` 结尾。
+
+![Xcode](readme.img/ios_src.png)
