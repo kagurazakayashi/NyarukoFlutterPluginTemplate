@@ -6,7 +6,7 @@ Java + Objective-C 版本
 
 [官方文档](https://docs.flutter.dev/packages-and-plugins/developing-packages#edit-plugin-package)
 
-## Flutter 端代码
+## [Flutter 端代码](https://docs.flutter.dev/packages-and-plugins/developing-packages#step-2a-define-the-package-api-dart)
 
 ### `lib/plugintemplatejo.dart`
 
@@ -46,7 +46,7 @@ Java + Objective-C 版本
 - 使用 MethodChannel 处理 iOS 和 Android。
 - 使用另一个 Dart-only 实现处理 Web。
 
-## Android 端代码
+## [Android 端代码](https://docs.flutter.dev/packages-and-plugins/developing-packages#step-2b-add-android-platform-code-kt-java)
 
 在编辑代码之前，先至少构建过一次。
 
@@ -64,7 +64,7 @@ flutter build apk --config-only
 
 ![Android Studio](readme.img/android_src.png)
 
-## iOS 端代码
+## [iOS 端代码](https://docs.flutter.dev/packages-and-plugins/developing-packages#step-2c-add-ios-platform-code-swift-hplus-m)
 
 在编辑代码之前，先至少构建过一次。
 
@@ -81,3 +81,26 @@ open example/ios/Runner.xcworkspace # 打开 Xcode
 如果使用的是 `sharedDarwinSource` ，路径将以 `plugintemplatejo/darwin/Classes/PlugintemplatejoPlugin.m` 结尾。
 
 ![Xcode](readme.img/ios_src.png)
+
+### [添加 CocoaPod 依赖项](https://docs.flutter.dev/packages-and-plugins/developing-packages#add-cocoapod-dependencies)
+
+1. 在项目的 `pubspec.yaml` 依赖中添加插件。
+2. 运行 `flutter pub get`
+3. 在项目的 `ios/` 目录中，运行 `pod install` 。
+
+## Linux 端代码
+
+`Visual Studio Code` 安装插件 `C/C++` 和 `CMake`
+
+在编辑代码之前，先至少构建过一次。
+
+```sh
+cd example
+flutter build linux
+```
+
+1. 启动 Visual Studio Code。
+2. 打开 `example/linux` 目录。
+3. 提示 `Would you like to configure project "linux"?` 时选择“是”，允许 C++ 自动完成功能。
+
+源码文件位于项目文件夹: [linux/plugintemplatejo_plugin.cc](linux/plugintemplatejo_plugin.cc)
