@@ -71,10 +71,11 @@ flutter build apk --config-only
 ```sh
 cd example
 flutter build ios --no-codesign --config-only
+cd ..
 open example/ios/Runner.xcworkspace # 打开 Xcode
 ```
 
-源码文件在 `Xcode` 中: `Pods/Development Pods/plugintemplatejo/../../example/ios/.symlinks/plugins/plugintemplatejo/ios/Classes/PlugintemplatejoPlugin.m`
+源码文件在 `Xcode` 中: `Pods/Development Pods/plugintemplatejo/../../example/ios/.symlinks/plugins/plugintemplatejo/ios/Classes/PlugintemplatejoPlugin.m` 。
 
 位于项目文件夹: [ios/Classes/PlugintemplatejoPlugin.m](ios/Classes/PlugintemplatejoPlugin.m)
 
@@ -104,3 +105,22 @@ flutter build linux
 3. 提示 `Would you like to configure project "linux"?` 时选择“是”，允许 C++ 自动完成功能。
 
 源码文件位于项目文件夹: [linux/plugintemplatejo_plugin.cc](linux/plugintemplatejo_plugin.cc)
+
+## macOS 端代码
+
+在编辑代码之前，先至少构建过一次。
+
+```sh
+cd example
+flutter build macos --config-only
+cd ..
+open example/macos/Runner.xcworkspace # 打开 Xcode
+```
+
+源码文件在 `Xcode` 中: `Pods/Development Pods/plugintemplatejo/../../example/macos/Flutter/ephemeral/.symlinks/plugins/plugintemplatejo/macos/Classes` 。
+
+位于项目文件夹: [macos/Classes/PlugintemplatejoPlugin.swift](macos/Classes/PlugintemplatejoPlugin.swift)
+
+如果使用的是 `sharedDarwinSource` ，路径将以 `plugintemplatejo/darwin/Classes` 结尾。
+
+![Xcode](readme.img/macos_src.png)
