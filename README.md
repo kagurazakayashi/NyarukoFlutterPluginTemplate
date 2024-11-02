@@ -89,7 +89,7 @@ open example/ios/Runner.xcworkspace # 打开 Xcode
 2. 运行 `flutter pub get`
 3. 在项目的 `ios/` 目录中，运行 `pod install` 。
 
-## Linux 端代码
+## [Linux 端代码](https://docs.flutter.dev/packages-and-plugins/developing-packages#step-2d-add-linux-platform-code-hplus-cc)
 
 `Visual Studio Code` 安装插件 `C/C++` 和 `CMake`
 
@@ -106,7 +106,7 @@ flutter build linux
 
 源码文件位于项目文件夹: [linux/plugintemplatejo_plugin.cc](linux/plugintemplatejo_plugin.cc)
 
-## macOS 端代码
+## [macOS 端代码](https://docs.flutter.dev/packages-and-plugins/developing-packages#step-2e-add-macos-platform-code-swift)
 
 在编辑代码之前，先至少构建过一次。
 
@@ -124,3 +124,31 @@ open example/macos/Runner.xcworkspace # 打开 Xcode
 如果使用的是 `sharedDarwinSource` ，路径将以 `plugintemplatejo/darwin/Classes` 结尾。
 
 ![Xcode](readme.img/macos_src.png)
+
+## [Windows 端代码](https://docs.flutter.dev/packages-and-plugins/developing-packages#step-2f-add-windows-platform-code-hplus-cpp)
+
+在编辑代码之前，先至少构建过一次。
+
+```bat
+CD example
+flutter build windows
+CD ..
+example\build\windows\x64\plugintemplatejo_example.sln
+```
+
+Visual Studio 安装 C++ 负载 Windows 10 SDK `10.0.20348.0` 而不是 `10.0.19041.0` ，否则 `No CMAKE_CXX_COMPILER could be found` 。
+
+源码文件在 `Visual Studio` 中:
+
+- `plugintemplatejo_plugin\Header Files\plugintemplatejo_plugin.h`
+- `plugintemplatejo_plugin\Source Files\plugintemplatejo_plugin.cpp`
+
+位于项目文件夹:
+
+- [windows\plugintemplatejo_plugin.h](windows/plugintemplatejo_plugin.h)
+- [windows\plugintemplatejo_plugin.cpp](windows/plugintemplatejo_plugin.cpp)
+
+运行前:
+
+1. 右键单击 `plugintemplatejo_example` 并选择“设为启动项目”
+2. 选择“生成” > “生成解决方案”

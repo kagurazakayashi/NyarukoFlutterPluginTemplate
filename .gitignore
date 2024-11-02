@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/windows,linux,macos,flutter,dart,objective-c,java,c,c++,kotlin,swift,android,androidstudio,xcode,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=windows,linux,macos,flutter,dart,objective-c,java,c,c++,kotlin,swift,android,androidstudio,xcode,visualstudiocode
+# Created by https://www.toptal.com/developers/gitignore/api/c,c++,dart,java,linux,macos,swift,xcode,kotlin,android,flutter,windows,objective-c,androidstudio,visualstudiocode,cmake
+# Edit at https://www.toptal.com/developers/gitignore?templates=c,c++,dart,java,linux,macos,swift,xcode,kotlin,android,flutter,windows,objective-c,androidstudio,visualstudiocode,cmake
 
 ### Android ###
 # Gradle files
@@ -114,6 +114,23 @@ dkms.conf
 *.lai
 
 # Executables
+
+### CMake ###
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+
+### CMake Patch ###
+# External projects
+*-prefix/
 
 ### Dart ###
 # See https://www.dartlang.org/guides/libraries/private-files
@@ -585,4 +602,4 @@ fabric.properties
 
 !/gradle/wrapper/gradle-wrapper.jar
 
-# End of https://www.toptal.com/developers/gitignore/api/windows,linux,macos,flutter,dart,objective-c,java,c,c++,kotlin,swift,android,androidstudio,xcode,visualstudiocode
+# End of https://www.toptal.com/developers/gitignore/api/c,c++,dart,java,linux,macos,swift,xcode,kotlin,android,flutter,windows,objective-c,androidstudio,visualstudiocode,cmake
