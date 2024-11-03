@@ -6,6 +6,43 @@ Java + Objective-C 版本
 
 [官方文档](https://docs.flutter.dev/packages-and-plugins/developing-packages#edit-plugin-package)
 
+## 创建
+
+本实例用的创建命令：
+
+```bash
+flutter create --org moe.yashi --template=plugin \
+    --platforms=android,ios,linux,macos,windows \
+    -a java -i objc plugintemplatejo
+flutter pub get
+```
+
+添加更多平台：在项目目录中再次运行 `flutter create` 并使用 `--template=plugin` 标志。
+
+```sh
+flutter create --template=plugin --platforms=web .
+flutter pub get
+```
+
+## 运行
+
+```sh
+# 在指定平台运行：
+flutter run -d android
+flutter run -d ios
+flutter run -d linux
+flutter run -d macos
+flutter run -d windows
+flutter run -d chrome # web
+```
+
+```sh
+# 查看设备 ID 列表:
+flutter devices
+# 在指定设备上运行：
+flutter run -d $device_id
+```
+
 ## [Flutter 端代码](https://docs.flutter.dev/packages-and-plugins/developing-packages#step-2a-define-the-package-api-dart)
 
 ### `lib/plugintemplatejo.dart`
@@ -147,6 +184,8 @@ Visual Studio 安装 C++ 负载 Windows 10 SDK `10.0.20348.0` 而不是 `10.0.19
 
 - [windows\plugintemplatejo_plugin.h](windows/plugintemplatejo_plugin.h)
 - [windows\plugintemplatejo_plugin.cpp](windows/plugintemplatejo_plugin.cpp)
+
+![Visual Studio](readme.img/windows_src.png)
 
 运行前:
 
