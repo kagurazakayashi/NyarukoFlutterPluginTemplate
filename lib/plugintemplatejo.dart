@@ -1,4 +1,5 @@
 import 'plugintemplatejo_platform_interface.dart';
+export 'myobject.dart';
 
 /// Plugintemplatejo 类封装了插件的核心功能，用于与平台相关的接口通信。
 class Plugintemplatejo {
